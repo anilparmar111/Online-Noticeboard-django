@@ -1,0 +1,216 @@
+from django.db import models
+
+# Create your models here.
+
+
+class Student_ce(models.Model):
+    id=models.AutoField(primary_key=True)
+    email_request=models.CharField(max_length=2,default="0")
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    mno=models.CharField(max_length=12, default="")
+    email=models.EmailField()
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    regtime=models.DateTimeField()
+
+class Student_ec(models.Model):
+    id=models.AutoField(primary_key=True)
+    email_request=models.CharField(max_length=2,default="0")
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Student_it(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    email_request=models.CharField(max_length=2,default="0")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Student_cl(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    email_request=models.CharField(max_length=2,default="0")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Student_mh(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    email_request=models.CharField(max_length=2,default="0")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Student_ch(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    email_request=models.CharField(max_length=2,default="0")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Student_ic(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    email_request=models.CharField(max_length=2,default="0")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+
+
+
+
+#faculty database
+
+
+class Faculty_ce(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+
+class Faculty_ec(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Faculty_it(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Faculty_cl(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Faculty_mh(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Faculty_ch(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+class Faculty_ic(models.Model):
+    id=models.AutoField(primary_key=True)
+    fname=models.CharField(max_length=20, default="")
+    mname=models.CharField(max_length=20,default="")
+    lname=models.CharField(max_length=20, default="")
+    gender=models.CharField(max_length=6, default="")
+    bdate=models.DateField()
+    #branch=models.CharField(max_length=4, default="")
+    mno=models.CharField(max_length=12, default="")
+    userid=models.CharField(max_length=11, default="")
+    password=models.CharField(max_length=11, default="")
+    email=models.EmailField()
+    regtime=models.DateTimeField()
+
+#department table

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Upload Notice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Style the body */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+            }
+
+            /* Header/logo Title */
+            .header {
+                padding: 30px;
+                text-align: center;
+                background: #1abc9c;
+                color: white;
+            }
+
+            /* Increase the font size of the heading */
+            .header h1 {
+                font-size: 40px;
+            }
+
+            /* Style the top navigation bar */
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            /* Style the navigation bar links */
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+            /* Right-aligned link */
+            .navbar a.right {
+                float: right;
+            }
+
+            /* Change color on hover */
+            .navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            /* Column container */
+            .row {  
+                display: -ms-flexbox; /* IE10 */
+                display: flex;
+                -ms-flex-wrap: wrap; /* IE10 */
+                flex-wrap: wrap;
+            }
+
+            /* Create two unequal columns that sits next to each other */
+            /* Sidebar/left column */
+            .side {
+                -ms-flex: 30%; /* IE10 */
+                flex: 15%;
+                background-color: #333;
+                padding: 20px;
+            }
+
+            /* Main column */
+            .main {   
+                -ms-flex: 70%; /* IE10 */
+                flex: 85%;
+                background-color: white;
+                padding: 20px;
+            }
+
+
+            /* Footer */
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+            }
+
+
+            @media screen and (max-width: 700px) {
+                .row {   
+                    flex-direction: column;
+                }
+            }
+
+            @media screen and (max-width: 400px) {
+                .navbar a {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/faculty/upload/" method="post">{% csrf_token%}
+            <div class="header">
+                <h1>Upload Notice</h1>
+            </div>
+            <div class="row">
+                <div class="main">
+                    <textarea align="center" name="notice" rows="20" style="width:100%;" placeholder="write your notice hear"></textarea>
+                </div>
+            </div>
+
+            <input type="checkbox" name="sem[]"  id="selected" value="1">SEMESTER 1<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="2">SEMESTER 2<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="3">SEMESTER 3<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="4">SEMESTER 4<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="5">SEMESTER 5<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="6">SEMESTER 6<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="7">SEMESTER 7<br>
+            <input type="checkbox" name="sem[]"  id="selected" value="8">SEMESTER 8<br>
+            <div class="footer">
+                <input type="submit" value="Upload Your Notice" name="submit">
+                <button><a href="logout.php" >Log out</a></button>
+            </div>
+        </form>
+    </body>
+</html>

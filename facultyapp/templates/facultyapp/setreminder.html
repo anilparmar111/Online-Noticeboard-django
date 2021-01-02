@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>setreminder</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/faculty/addreminder_data/" method="POST">{%csrf_token%}
+        <table>
+            <tr>
+                <th colspan="2" align="center">Set Reminder For Student</th>
+            </tr>
+            <tr>
+                <th>Reminder : </th>
+                <td><textarea rows="7" cols="50" name="reminder" placeholder="Type your reminder for student"></textarea></td>
+            </tr>
+            <tr>
+                <th>Date : </th>
+                <td><input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <th>Select Semester : </th>
+                <td>
+                    <input type="checkbox" name="sem[]" value="1">Semester 1 
+                    <input type="checkbox" name="sem[]" value="2">Semester 2 
+                    <input type="checkbox" name="sem[]" value="3">Semester 3 
+                    <input type="checkbox" name="sem[]" value="4">Semester 4 
+                    <input type="checkbox" name="sem[]" value="5">Semester 5 
+                    <input type="checkbox" name="sem[]" value="6">Semester 6 
+                    <input type="checkbox" name="sem[]" value="7">Semester 7 
+                    <input type="checkbox" name="sem[]" value="8">Semester 8  
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="Set Reminder For Student"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

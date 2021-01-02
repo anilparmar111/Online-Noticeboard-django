@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>setreminder</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/faculty/add_self_reminder_data/" method="POST">{%csrf_token%}
+        <table>
+            <tr>
+                <th colspan="2" align="center">Set Reminder</th>
+            </tr>
+            <tr>
+                <th>Reminder : </th>
+                <td><textarea rows="7" cols="50" name="reminder" placeholder="Type your reminder for student"></textarea></td>
+            </tr>
+            <tr>
+                <th>Date : </th>
+                <td><input type="date" name="date"></td>
+            </tr>
+            
+            <tr>
+                <th colspan="2"><input type="submit" value="Set Reminder For Student"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

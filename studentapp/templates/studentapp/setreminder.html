@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Set Reminder</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body style="background-color: snow;">
+    <div style="overflow-x:auto;">
+        <form method="POST" action="/student/setreminder/">{% csrf_token%}
+            <table align="center">
+                <tr>
+                    <th colspan="2">
+                        <h3 align="center">Set Reminder</h3>
+                    </th>   
+                </tr>
+                <tr>
+                    <th>Type Your Reminder : </th>
+                    <td><textarea rows="5" cols="100" name="reminder" placeholder="Enter your reminder"></textarea></td>
+                </tr>
+                <tr>
+                    <th>Set Date : </th>
+                    <td><input type="date" name="rdate"></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit"></th>
+                </tr>
+        </form>
+    </div>
+</body>
+
+</html>

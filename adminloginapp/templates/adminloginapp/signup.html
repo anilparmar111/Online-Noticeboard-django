@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="javascript" type="text/javascript" >
+            window.history.forward();
+        </script>
+    </head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* Add a background color when the inputs get focus */
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn,
+        .signupbtn {
+            float: left;
+            width: 33.33%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: #474e5d;
+            padding-top: 50px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <body>
+
+        <form class="modal-content" action="/adminlogin/insert/" method="POST">{% csrf_token%}
+            <div class="container">
+                <h1>Registration</h1>
+                <p>Please Fill This Data For Registration</p>
+                <hr>
+                <label for="fname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter your first name" name="fname" required>
+
+                <label for="mname"><b>Middle Name</b></label>
+                <input type="text" placeholder="Enter your middle name" name="mname" required>
+
+                <label for="lname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter your last name" name="lname" required>
+                <label for="validate-user"><b>Select For Student OR Faculty</b></label><br><br>
+                <input type="radio" name="validate" value="student" required> Student
+                <input type="radio" name="validate" value="faculty" required> Faculty<br><br><br>
+
+                <label for="gender"><b>Gender</b></label><br><br>
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female<br><br><br>
+
+                <label for='bdate'><b>Birth Date</b></label><br><br>
+                <input type="date" name='bdate' required><br><br><br>
+
+                <label for="branch"><b>Branch</b></label><br><br>
+                <input type="radio" name="branch" value="CE">CE
+                <input type="radio" name="branch" value="EC">EC
+                <input type="radio" name="branch" value="IT">IT
+                <input type="radio" name="branch" value="MH">MH
+                <input type="radio" name="branch" value="CH">CH
+                <input type="radio" name="branch" value="IC">IC
+                <input type="radio" name="branch" value="CL">CL
+                <br><br><br>
+
+
+                <label for="mobileno"><b>Mobile NO</b></label><br><br>
+                <input type="text" name="mno" required placeholder="enter your mobile no"><br><br><br>
+                <label for="email"><b>Email</b></label><br><br>
+                <input type="text" name='email' placeholder="enter your email address" required><br><br><br>
+                <div class="clearfix">
+                    <button type="reset" class="cancelbtn">Reset</button>
+                    <button type="submit" class="signupbtn">Register</button>
+                    <button  onclick="location.href = '/adminlogin/logout/' " class="cancelbtn" type="button">Logout</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
