@@ -15,6 +15,7 @@ from django.db import models
 #     we have redundant data in branch column 
 #     so i use difrent diffrent database table for diffrent diffrent branch
 #     otherwise i can create 1 table for all the facultys
+#     If You have any suggestion then please give mi
 
 class Ce_reminder(models.Model):
     userid = models.CharField(max_length=11)
