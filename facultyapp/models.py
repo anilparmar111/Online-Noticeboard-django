@@ -2,6 +2,19 @@ from django.db import models
 
 # Create your models here.
 
+#hear i have created diffrent model model for diffrent department because i use normalization
+#we can also create 1 table for all 
+# class faculty(models.model):
+#     id
+#     sem
+#     uptime
+#     userid
+#     location
+#     branch // for diffrent branch's faculty
+#     but if we thousands of data then in this table
+#     we have redundant data in branch column 
+#     so i use difrent diffrent database table for diffrent diffrent branch
+#     otherwise i can create 1 table for all the facultys
 
 class Ce(models.Model):
     id=models.AutoField(primary_key=True)
